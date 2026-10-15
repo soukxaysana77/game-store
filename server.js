@@ -265,6 +265,6 @@ app.use('/games/:gameId', (req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 app.listen(PORT, () => console.log(`Game portal running at http://localhost:${PORT} (payment: ${PAYMENT_MODE})`));
